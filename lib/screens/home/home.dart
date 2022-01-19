@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_temperature_humidity_system/controllers/MenuController.dart';
 import 'package:flutter_temperature_humidity_system/screens/components/provider.dart';
-import 'package:flutter_temperature_humidity_system/screens/home/components/provider.dart';
 import 'package:provider/provider.dart';
 
 import '../../constants.dart';

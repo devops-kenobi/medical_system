@@ -10,7 +10,6 @@ import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 import '../../../constants.dart';
-import 'provider.dart';
 
 class BodyDetellsCabinet extends StatefulWidget {
   BodyDetellsCabinet({Key? key}) : super(key: key);
@@ -103,9 +102,9 @@ class _ShowGraphState extends State<ShowGraph> {
         .collection('sensors')
         .get()
         .then((QuerySnapshot querySnapshot) {
-      querySnapshot.docs.forEach((doc) {
+      for (var doc in querySnapshot.docs) {
         sensorName.putIfAbsent(doc.id, () => doc["name"]);
-      });
+      }
     });
 //--------------------------------------------------------------------------------------------------------------------------------------
 // ในส่วนนี้เป็นโค้ดของการรวมข้อมูลเซนเซอร์ในตู้ยามาพอร์ตกราฟแต่เนื่องจากตัว dependencies "syncfusion_flutter_charts"
