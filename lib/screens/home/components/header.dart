@@ -53,7 +53,7 @@ class HeaderHome extends StatelessWidget {
                     width: 15,
                   ),
                   SvgPicture.asset(
-                    "icon/temMax.svg",
+                    "assets/icons/temMax.svg",
                     color: colorTextP2,
                     height: 17,
                   ),
@@ -65,7 +65,7 @@ class HeaderHome extends StatelessWidget {
                     width: 15,
                   ),
                   SvgPicture.asset(
-                    "icon/temMin.svg",
+                    "assets/icons/temMin.svg",
                     color: colorTextP2,
                     height: 17,
                   ),
@@ -77,7 +77,7 @@ class HeaderHome extends StatelessWidget {
                     width: 15,
                   ),
                   SvgPicture.asset(
-                    "icon/humidityMax.svg",
+                    "assets/icons/humidityMax.svg",
                     color: colorTextP2,
                     height: 17,
                   ),

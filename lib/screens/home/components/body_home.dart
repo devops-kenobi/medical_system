@@ -193,7 +193,7 @@ class _MedicineCabinetState extends State<MedicineCabinet> {
                           width: 14,
                         ),
                         SvgPicture.asset(
-                          "icon/temMax.svg",
+                          "assets/icons/temMax.svg",
                           color: colorTextP4,
                           height: 20,
                         ),
@@ -209,7 +209,7 @@ class _MedicineCabinetState extends State<MedicineCabinet> {
                           width: 14,
                         ),
                         SvgPicture.asset(
-                          "icon/temMin.svg",
+                          "assets/icons/temMin.svg",
                           color: colorTextP4,
                           height: 20,
                         ),
@@ -225,7 +225,7 @@ class _MedicineCabinetState extends State<MedicineCabinet> {
                           width: 14,
                         ),
                         SvgPicture.asset(
-                          "icon/humidityMax.svg",
+                          "assets/icons/humidityMax.svg",
                           color: colorTextP4,
                           height: 20,
                         ),
@@ -301,7 +301,7 @@ class _MedicineCabinetState extends State<MedicineCabinet> {
                                                                     .center,
                                                             children: [
                                                               SvgPicture.asset(
-                                                                "icon/temperature.svg",
+                                                                "assets/icons/temperature.svg",
                                                                 color:
                                                                     colorTextP3,
                                                                 height: 70,
@@ -357,7 +357,7 @@ class _MedicineCabinetState extends State<MedicineCabinet> {
                                                                 width: 10,
                                                               ),
                                                               SvgPicture.asset(
-                                                                "icon/humidity.svg",
+                                                                "assets/icons/humidity.svg",
                                                                 color:
                                                                     colorTextP3,
                                                                 height: 70,
@@ -430,7 +430,7 @@ class _MedicineCabinetState extends State<MedicineCabinet> {
                                                                     .center,
                                                             children: [
                                                               SvgPicture.asset(
-                                                                "icon/temperature.svg",
+                                                                "assets/icons/temperature.svg",
                                                                 color:
                                                                     colorTextP3,
                                                                 height: 40,
@@ -492,7 +492,7 @@ class _MedicineCabinetState extends State<MedicineCabinet> {
                                                                 width: 10,
                                                               ),
                                                               SvgPicture.asset(
-                                                                "icon/humidity.svg",
+                                                                "assets/icons/humidity.svg",
                                                                 color:
                                                                     colorTextP3,
                                                                 height: 40,
@@ -603,7 +603,7 @@ class _MedicineCabinetState extends State<MedicineCabinet> {
                                                                   .center,
                                                           children: [
                                                             SvgPicture.asset(
-                                                              "icon/temperature.svg",
+                                                              "assets/icons/temperature.svg",
                                                               color: temRed ==
                                                                       false
                                                                   ? cabinetGreen1
@@ -667,7 +667,7 @@ class _MedicineCabinetState extends State<MedicineCabinet> {
                                                               width: 10,
                                                             ),
                                                             SvgPicture.asset(
-                                                              "icon/humidity.svg",
+                                                              "assets/icons/humidity.svg",
                                                               color: humRed ==
                                                                       false
                                                                   ? cabinetGreen1
@@ -777,7 +777,7 @@ class _MedicineCabinetState extends State<MedicineCabinet> {
                                                                   .center,
                                                           children: [
                                                             SvgPicture.asset(
-                                                              "icon/temperature.svg",
+                                                              "assets/icons/temperature.svg",
                                                               color: temRed ==
                                                                       false
                                                                   ? cabinetGreen1
@@ -845,7 +845,7 @@ class _MedicineCabinetState extends State<MedicineCabinet> {
                                                               width: 10,
                                                             ),
                                                             SvgPicture.asset(
-                                                              "icon/humidity.svg",
+                                                              "assets/icons/humidity.svg",
                                                               color: humRed ==
                                                                       false
                                                                   ? cabinetGreen1

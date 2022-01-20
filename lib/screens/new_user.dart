@@ -40,7 +40,7 @@ class _CreateNewUserState extends State<CreateNewUser> {
               decoration: const BoxDecoration(
                 color: Colors.grey,
                 image: DecorationImage(
-                  image: AssetImage("images/bg2.jpg"),
+                  image: AssetImage("assets/images/bg2.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),

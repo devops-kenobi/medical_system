@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
         decoration: const BoxDecoration(
           color: Colors.grey,
           image: DecorationImage(
-            image: AssetImage("images/bg.jpg"),
+            image: AssetImage("assets/images/bg.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -118,7 +118,7 @@ class _LoginPageState extends State<LoginPage> {
                         children: [
                           SizedBox(
                             child: Image.asset(
-                              "images/user.png",
+                              "assets/images/user.png",
                               height: 120,
                             ),
                           ),

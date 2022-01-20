@@ -135,7 +135,7 @@ class _CabinetState extends State<Cabinet> {
                                             child: Column(
                                               children: [
                                                 SvgPicture.asset(
-                                                    "icon/temperature.svg",
+                                                    "assets/icons/temperature.svg",
                                                     color: colorTextP2),
                                                 const SizedBox(
                                                   height: 5,
@@ -211,7 +211,7 @@ class _CabinetState extends State<Cabinet> {
                                             child: Column(
                                               children: [
                                                 SvgPicture.asset(
-                                                    "icon/humidity.svg",
+                                                    "assets/icons/humidity.svg",
                                                     color: colorTextP2),
                                                 const SizedBox(
                                                   height: 5,
@@ -784,7 +784,7 @@ class _CabinetState extends State<Cabinet> {
                             controller: _temperatureMax,
                             decoration: InputDecoration(
                               hintText: "อุณหภูมิสูงสุดที่ยอมรับได้ °C",
-                              icon: SvgPicture.asset("icon/temMax.svg",
+                              icon: SvgPicture.asset("assets/icons/temMax.svg",
                                   color: colorTextP2),
                               suffixText: "°C",
                               border: OutlineInputBorder(
@@ -803,7 +803,7 @@ class _CabinetState extends State<Cabinet> {
                             controller: _temperatureMin,
                             decoration: InputDecoration(
                               hintText: "อุณหภูมิต่ำสุดที่ยอมรับได้ °C",
-                              icon: SvgPicture.asset("icon/temMin.svg",
+                              icon: SvgPicture.asset("assets/icons/temMin.svg",
                                   color: colorTextP2),
                               suffixText: "°C",
                               border: OutlineInputBorder(
@@ -822,7 +822,8 @@ class _CabinetState extends State<Cabinet> {
                             controller: _humidityMax,
                             decoration: InputDecoration(
                               hintText: "ความชื้นสูงสุดที่ยอมรับได้ %",
-                              icon: SvgPicture.asset("icon/humidityMax.svg",
+                              icon: SvgPicture.asset(
+                                  "assets/icons/humidityMax.svg",
                                   color: colorTextP2),
                               suffixText: "%",
                               border: OutlineInputBorder(

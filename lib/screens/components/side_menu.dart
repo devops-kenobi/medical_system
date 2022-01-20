@@ -21,12 +21,12 @@ class SideMenu extends StatelessWidget {
       child: ListView(
         children: [
           DrawerHeader(
-            child: Image.asset("images/logo.png"),
+            child: Image.asset("assets/images/logo.png"),
           ),
           DrawerListTile(
             titleColor: provider.getPage() == 1 ? bgColor : secondaryColor,
             title: "หน้าหลัก",
-            svgSrc: "icon/home.svg",
+            svgSrc: "assets/icons/home.svg",
             press: () {
               provider.setPage(1);
             },
@@ -34,7 +34,7 @@ class SideMenu extends StatelessWidget {
           DrawerListTile(
             titleColor: provider.getPage() == 2 ? bgColor : secondaryColor,
             title: "ข้อมูลที่เก็บยา",
-            svgSrc: "icon/setting.svg",
+            svgSrc: "assets/icons/setting.svg",
             press: () {
               provider.setPage(2);
             },
@@ -42,7 +42,7 @@ class SideMenu extends StatelessWidget {
           DrawerListTile(
             titleColor: provider.getPage() == 3 ? bgColor : secondaryColor,
             title: "ข้อมูลผู้ใช้",
-            svgSrc: "icon/user.svg",
+            svgSrc: "assets/icons/user.svg",
             press: () {
               provider.setPage(3);
             },
@@ -67,7 +67,7 @@ class SideMenu extends StatelessWidget {
             },
             horizontalTitleGap: 0.0,
             leading: SvgPicture.asset(
-              "icon/logout.svg",
+              "assets/icons/logout.svg",
               color: Colors.white54,
               height: 20,
             ),

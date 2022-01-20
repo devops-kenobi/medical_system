@@ -134,7 +134,7 @@ class _CreateCabinetState extends State<CreateCabinet> {
                       controller: _temperatureMax,
                       decoration: InputDecoration(
                         hintText: "อุณหภูมิสูงสุดที่ยอมรับได้ °C",
-                        icon: SvgPicture.asset("icon/temMax.svg",
+                        icon: SvgPicture.asset("assets/icons/temMax.svg",
                             color: colorTextP2),
                         suffixText: "°C",
                         border: OutlineInputBorder(
@@ -152,7 +152,7 @@ class _CreateCabinetState extends State<CreateCabinet> {
                     TextField(
                       controller: _temperatureMin,
                       decoration: InputDecoration(
-                        icon: SvgPicture.asset("icon/temMin.svg",
+                        icon: SvgPicture.asset("assets/icons/temMin.svg",
                             color: colorTextP2),
                         hintText: "อุณหภูมิต่ำสุดที่ยอมรับได้ °C",
                         suffixText: "°C",
@@ -172,7 +172,7 @@ class _CreateCabinetState extends State<CreateCabinet> {
                       controller: _humidityMax,
                       decoration: InputDecoration(
                         hintText: "ความชื้นสูงสุดที่ยอมรับได้ %",
-                        icon: SvgPicture.asset("icon/humidityMax.svg",
+                        icon: SvgPicture.asset("assets/icons/humidityMax.svg",
                             color: colorTextP2),
                         suffixText: "%",
                         border: OutlineInputBorder(

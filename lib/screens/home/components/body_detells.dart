@@ -220,12 +220,12 @@ class _ShowGraphState extends State<ShowGraph> {
                   children: [
                     resTempAndHumi == true
                         ? SvgPicture.asset(
-                            "icon/temperature.svg",
+                            "assets/icons/temperature.svg",
                             color: colorTextP3,
                             height: 40,
                           )
                         : SvgPicture.asset(
-                            "icon/humidity.svg",
+                            "assets/icons/humidity.svg",
                             color: colorTextP3,
                             height: 40,
                           ),
@@ -265,7 +265,7 @@ class _ShowGraphState extends State<ShowGraph> {
                             width: 15,
                           ),
                           SvgPicture.asset(
-                            "icon/temMax.svg",
+                            "assets/icons/temMax.svg",
                             color: colorTextP3,
                             height: 17,
                           ),
@@ -278,7 +278,7 @@ class _ShowGraphState extends State<ShowGraph> {
                             width: 15,
                           ),
                           SvgPicture.asset(
-                            "icon/temMin.svg",
+                            "assets/icons/temMin.svg",
                             color: colorTextP3,
                             height: 17,
                           ),
@@ -291,7 +291,7 @@ class _ShowGraphState extends State<ShowGraph> {
                             width: 15,
                           ),
                           SvgPicture.asset(
-                            "icon/humidityMax.svg",
+                            "assets/icons/humidityMax.svg",
                             color: colorTextP3,
                             height: 17,
                           ),
@@ -1078,7 +1078,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                   children: [
                                                                     SvgPicture
                                                                         .asset(
-                                                                      "icon/temperature.svg",
+                                                                      "assets/icons/temperature.svg",
                                                                       color: temRed ==
                                                                               true
                                                                           ? cabinetRed
@@ -1263,7 +1263,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                 children: [
                                                                   SvgPicture
                                                                       .asset(
-                                                                    "icon/temperature.svg",
+                                                                    "assets/icons/temperature.svg",
                                                                     color:
                                                                         cabinetGreen1,
                                                                     height: 40,
@@ -1352,7 +1352,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                 children: [
                                                                   SvgPicture
                                                                       .asset(
-                                                                    "icon/temperature.svg",
+                                                                    "assets/icons/temperature.svg",
                                                                     color:
                                                                         colorTextP2,
                                                                     height: 40,
@@ -1571,7 +1571,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                     children: [
                                                                       SvgPicture
                                                                           .asset(
-                                                                        "icon/humidity.svg",
+                                                                        "assets/icons/humidity.svg",
                                                                         color: humRed ==
                                                                                 true
                                                                             ? cabinetRed
@@ -1753,7 +1753,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                 children: [
                                                                   SvgPicture
                                                                       .asset(
-                                                                    "icon/humidity.svg",
+                                                                    "assets/icons/humidity.svg",
                                                                     color:
                                                                         cabinetGreen1,
                                                                     height: 40,
@@ -1843,7 +1843,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                 children: [
                                                                   SvgPicture
                                                                       .asset(
-                                                                    "icon/humidity.svg",
+                                                                    "assets/icons/humidity.svg",
                                                                     color:
                                                                         colorTextP2,
                                                                     height: 40,
@@ -2057,7 +2057,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                   children: [
                                                                     SvgPicture
                                                                         .asset(
-                                                                      "icon/temperature.svg",
+                                                                      "assets/icons/temperature.svg",
                                                                       color: temRed ==
                                                                               true
                                                                           ? cabinetRed
@@ -2279,7 +2279,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                   children: [
                                                                     SvgPicture
                                                                         .asset(
-                                                                      "icon/humidity.svg",
+                                                                      "assets/icons/humidity.svg",
                                                                       color: humRed ==
                                                                               true
                                                                           ? cabinetRed
@@ -2449,7 +2449,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                             30,
                                                                         child: SvgPicture
                                                                             .asset(
-                                                                          "icon/temperature.svg",
+                                                                          "assets/icons/temperature.svg",
                                                                           color:
                                                                               colorTextP2,
                                                                         ),
@@ -2461,7 +2461,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                             30,
                                                                         child: SvgPicture
                                                                             .asset(
-                                                                          "icon/humidity.svg",
+                                                                          "assets/icons/humidity.svg",
                                                                           color:
                                                                               colorTextP2,
                                                                         ),
@@ -2625,7 +2625,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                             Center(
                                                                           child:
                                                                               SvgPicture.asset(
-                                                                            "icon/temperature.svg",
+                                                                            "assets/icons/temperature.svg",
                                                                             color:
                                                                                 colorTextP2,
                                                                           ),
@@ -2640,7 +2640,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                             Center(
                                                                           child:
                                                                               SvgPicture.asset(
-                                                                            "icon/humidity.svg",
+                                                                            "assets/icons/humidity.svg",
                                                                             color:
                                                                                 colorTextP2,
                                                                           ),
@@ -2741,7 +2741,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                       onPressed: () =>
                                           provider.setResDataonlyone(true),
                                       icon: SvgPicture.asset(
-                                        "icon/11.svg",
+                                        "assets/icons/11.svg",
                                         color:
                                             provider.getResDataonlyone() == true
                                                 ? colorPriority1
@@ -2753,7 +2753,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                       onPressed: () =>
                                           provider.setResDataonlyone(false),
                                       icon: SvgPicture.asset(
-                                        "icon/12.svg",
+                                        "assets/icons/12.svg",
                                         color: provider.getResDataonlyone() ==
                                                 false
                                             ? colorPriority1
@@ -2892,7 +2892,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                             30,
                                                                         child: SvgPicture
                                                                             .asset(
-                                                                          "icon/temperature.svg",
+                                                                          "assets/icons/temperature.svg",
                                                                           color:
                                                                               colorTextP2,
                                                                         ),
@@ -2904,7 +2904,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                             30,
                                                                         child: SvgPicture
                                                                             .asset(
-                                                                          "icon/humidity.svg",
+                                                                          "assets/assets/icons/humidity.svg",
                                                                           color:
                                                                               colorTextP2,
                                                                         ),
@@ -3068,7 +3068,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                             Center(
                                                                           child:
                                                                               SvgPicture.asset(
-                                                                            "icon/temperature.svg",
+                                                                            "assets/icons/temperature.svg",
                                                                             color:
                                                                                 colorTextP2,
                                                                           ),
@@ -3083,7 +3083,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                             Center(
                                                                           child:
                                                                               SvgPicture.asset(
-                                                                            "icon/humidity.svg",
+                                                                            "assets/icons/humidity.svg",
                                                                             color:
                                                                                 colorTextP2,
                                                                           ),
@@ -3185,7 +3185,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                       onPressed: () =>
                                           provider.setResDataonlyone(true),
                                       icon: SvgPicture.asset(
-                                        "icon/11.svg",
+                                        "assets/icons/11.svg",
                                         color:
                                             provider.getResDataonlyone() == true
                                                 ? colorPriority1
@@ -3197,7 +3197,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                       onPressed: () =>
                                           provider.setResDataonlyone(false),
                                       icon: SvgPicture.asset(
-                                        "icon/12.svg",
+                                        "assets/icons/12.svg",
                                         color: provider.getResDataonlyone() ==
                                                 false
                                             ? colorPriority1
@@ -3372,7 +3372,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                               .center,
                                                       children: [
                                                         SvgPicture.asset(
-                                                          "icon/temperature.svg",
+                                                          "assets/icons/temperature.svg",
                                                           color: temRed == true
                                                               ? cabinetRed
                                                               : temYellow ==
@@ -3529,7 +3529,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                     child: Row(
                                                       children: [
                                                         SvgPicture.asset(
-                                                          "icon/temperature.svg",
+                                                          "assets/icons/temperature.svg",
                                                           color: cabinetGreen1,
                                                           height: 40,
                                                         ),
@@ -3709,7 +3709,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                 .center,
                                                         children: [
                                                           SvgPicture.asset(
-                                                            "icon/humidity.svg",
+                                                            "assets/icons/humidity.svg",
                                                             color: humRed ==
                                                                     true
                                                                 ? cabinetRed
@@ -3857,7 +3857,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                     child: Row(
                                                       children: [
                                                         SvgPicture.asset(
-                                                          "icon/humidity.svg",
+                                                          "assets/icons/humidity.svg",
                                                           color: cabinetGreen1,
                                                           height: 40,
                                                         ),
