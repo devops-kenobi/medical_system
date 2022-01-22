@@ -50,7 +50,7 @@ class ShowGraph extends StatefulWidget {
 
 class _ShowGraphState extends State<ShowGraph> {
   final play = AudioCache();
-  final player = AudioPlayer();
+  // final player = AudioPlayer();
   final _controllerGraph = ScrollController();
   final _controllerTem = ScrollController();
   final _controllerListDataDesktop = ScrollController();
@@ -58,8 +58,8 @@ class _ShowGraphState extends State<ShowGraph> {
   final _heightGraph = 480.0;
   double sizeBoxResDataalot = 175;
 
-  void notification() async {
-    await play.play('/sound/notification.wav');
+  void notification() {
+    play.play('sounds/notification.wav');
   }
 
   @override

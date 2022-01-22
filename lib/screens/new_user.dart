@@ -56,7 +56,7 @@ class _CreateNewUserState extends State<CreateNewUser> {
               children: [
                 SizedBox(
                   child: Center(
-                    child: Text("welcome new users",
+                    child: Text("welcome new user",
                         style: TextStyle(
                             fontSize: !Responsive.isMobile(context)
                                 ? sizePageWidth * 0.04

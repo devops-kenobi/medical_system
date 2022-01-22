@@ -1,10 +1,10 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_temperature_humidity_system/responsive.dart';
 import 'package:flutter_temperature_humidity_system/screens/components/provider.dart';
 import 'package:intl/intl.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:provider/provider.dart';
 import '../../../constants.dart';
 
@@ -54,7 +54,6 @@ class BodyHomeInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     double sizePageWidth = MediaQuery.of(context).size.width;
     double sizePageHeight = MediaQuery.of(context).size.height;
-    // print(data.length);
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -112,18 +111,18 @@ class MedicineCabinet extends StatefulWidget {
 
 class _MedicineCabinetState extends State<MedicineCabinet> {
   final play = AudioCache();
-  final player = AudioPlayer();
+  // final player = AudioPlayer();
 
   var formatDateTime = DateFormat('yyyy/MM/dd HH:mm');
   var formatTime = DateFormat('HH:mm');
 
   void notification() {
-    play.play('/sound/notification.wav');
+    play.play('sounds/notification.wav');
   }
 
-  void _stopFile() {
-    player.stop();
-  }
+  // void _stopFile() {
+  //   player.stop();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -579,14 +578,14 @@ class _MedicineCabinetState extends State<MedicineCabinet> {
                                                                 'temperature') <=
                                                             temperatureMin) {
                                                       notification();
-                                                      _stopFile();
+
                                                       temRed = true;
                                                     }
                                                     if (snapshot.data!.docs[0]
                                                             .get('humidity') >=
                                                         humidityMax) {
                                                       notification();
-                                                      _stopFile();
+
                                                       humRed = true;
                                                     }
                                                     Timestamp time = snapshot
@@ -754,7 +753,6 @@ class _MedicineCabinetState extends State<MedicineCabinet> {
                                                                     'temperature') <=
                                                             temperatureMin) {
                                                       notification();
-                                                      _stopFile();
                                                       temRed = true;
                                                     }
                                                     if (snapshot
@@ -762,7 +760,6 @@ class _MedicineCabinetState extends State<MedicineCabinet> {
                                                             .get('humidity') >=
                                                         humidityMax) {
                                                       notification();
-                                                      _stopFile();
                                                       humRed = true;
                                                     }
                                                     Timestamp time = snapshot
