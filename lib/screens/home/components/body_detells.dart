@@ -55,6 +55,7 @@ class _ShowGraphState extends State<ShowGraph> {
   final _controllerTem = ScrollController();
   final _controllerListDataDesktop = ScrollController();
   final _controllerListDataTablet = ScrollController();
+  final _controllerListDataMobile = ScrollController();
   final _heightGraph = 480.0;
   double sizeBoxResDataalot = 175;
 
@@ -74,9 +75,14 @@ class _ShowGraphState extends State<ShowGraph> {
     final _heightTem = sizeBoxInfoSensor / 2.1;
     final _widthListDataDesktop = (sizePageWidth * 0.36) * 0.85;
     final _widthListDataTablet = (sizePageWidth * 0.5) * 0.90;
+    final _widthListDataMobile = sizePageWidth * 0.95;
 
-    _animateTemToIndex(i) => _controllerTem.animateTo(_heightTem * i,
+    _animateTemAndHumToIndex(i) => _controllerTem.animateTo(_heightTem * i,
         duration: const Duration(seconds: 1), curve: Curves.fastOutSlowIn);
+
+    _animateTemAndHumToIndexMobile(i) =>
+        _controllerTem.animateTo((sizePageWidth / 2) * i,
+            duration: const Duration(seconds: 1), curve: Curves.fastOutSlowIn);
 
     _animateGarphToIndex(i) => _controllerGraph.animateTo(_heightGraph * i,
         duration: const Duration(seconds: 1), curve: Curves.fastOutSlowIn);
@@ -95,6 +101,10 @@ class _ShowGraphState extends State<ShowGraph> {
 
     _animateListDataTabletAlot(i) =>
         _controllerListDataTablet.animateTo(sizeBoxResDataalot * i,
+            duration: const Duration(seconds: 1), curve: Curves.fastOutSlowIn);
+
+    _animateListDataMobile(i) =>
+        _controllerListDataMobile.animateTo(_widthListDataMobile * i,
             duration: const Duration(seconds: 1), curve: Curves.fastOutSlowIn);
 
     Map<String, String> sensorName = {};
@@ -1110,7 +1120,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                     ),
                                                   );
                                                 } catch (e) {
-                                                  return SizedBox();
+                                                  return const SizedBox();
                                                 }
                                               });
                                         }),
@@ -1224,7 +1234,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                             onTap: () {
                                                               _animateGarphToIndex(
                                                                   index);
-                                                              _animateTemToIndex(
+                                                              _animateTemAndHumToIndex(
                                                                   index);
                                                               if (Responsive
                                                                   .isDesktop(
@@ -1313,7 +1323,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                             onTap: () {
                                                               _animateGarphToIndex(
                                                                   index);
-                                                              _animateTemToIndex(
+                                                              _animateTemAndHumToIndex(
                                                                   index);
                                                               if (Responsive
                                                                   .isDesktop(
@@ -1714,7 +1724,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                             onTap: () {
                                                               _animateGarphToIndex(
                                                                   index);
-                                                              _animateTemToIndex(
+                                                              _animateTemAndHumToIndex(
                                                                   index);
                                                               if (Responsive
                                                                   .isDesktop(
@@ -1804,7 +1814,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                             onTap: () {
                                                               _animateGarphToIndex(
                                                                   index);
-                                                              _animateTemToIndex(
+                                                              _animateTemAndHumToIndex(
                                                                   index);
                                                               if (Responsive
                                                                   .isDesktop(
@@ -2729,8 +2739,9 @@ class _ShowGraphState extends State<ShowGraph> {
                                   children: [
                                     IconButton(
                                       onPressed: () {
-                                        setState(() {});
-                                        showDialogConclusion();
+                                        setState(() {
+                                          showDialogConclusion();
+                                        });
                                       },
                                       icon: const Icon(
                                           Icons.description_outlined,
@@ -2904,7 +2915,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                                             30,
                                                                         child: SvgPicture
                                                                             .asset(
-                                                                          "assets/assets/icons/humidity.svg",
+                                                                          "assets/icons/humidity.svg",
                                                                           color:
                                                                               colorTextP2,
                                                                         ),
@@ -3173,8 +3184,9 @@ class _ShowGraphState extends State<ShowGraph> {
                                   children: [
                                     IconButton(
                                       onPressed: () {
-                                        setState(() {});
-                                        showDialogConclusion();
+                                        setState(() {
+                                          showDialogConclusion();
+                                        });
                                       },
                                       icon: const Icon(
                                           Icons.description_outlined,
@@ -3215,12 +3227,13 @@ class _ShowGraphState extends State<ShowGraph> {
               ],
             ),
           ),
+
         // part 2 Responsive Mobile only :=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
         if (Responsive.isMobile(context))
           SizedBox(
               //Responsive sensor > 1 ==================================
               height: 215,
-              width: double.infinity,
+              width: sizePageWidth,
               child: Card(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
@@ -3496,31 +3509,10 @@ class _ShowGraphState extends State<ShowGraph> {
                                                       BorderRadius.circular(9),
                                                   onTap: () {
                                                     _animateGarphToIndex(index);
-                                                    _animateTemToIndex(index);
-                                                    if (Responsive.isDesktop(
-                                                        context)) {
-                                                      _animateListDataDesktop(
-                                                          index);
-                                                    }
-                                                    if (Responsive.isDesktop(
-                                                            context) &&
-                                                        provider.getResDataonlyone() ==
-                                                            false) {
-                                                      _animateListDataDesktopAlot(
-                                                          index);
-                                                    }
-                                                    if (Responsive.isTablet(
-                                                        context)) {
-                                                      _animateListDataTablet(
-                                                          index);
-                                                    }
-                                                    if (Responsive.isTablet(
-                                                            context) &&
-                                                        provider.getResDataonlyone() ==
-                                                            false) {
-                                                      _animateListDataTabletAlot(
-                                                          index);
-                                                    }
+                                                    _animateTemAndHumToIndexMobile(
+                                                        index);
+                                                    _animateListDataMobile(
+                                                        index);
                                                   },
                                                   child: Padding(
                                                     padding:
@@ -3653,7 +3645,7 @@ class _ShowGraphState extends State<ShowGraph> {
                                                         children: [
                                                           GetCurrentSensorName(
                                                               index),
-                                                          Spacer(),
+                                                          const Spacer(),
                                                           Text(
                                                             formatDate.format(
                                                                 time.toDate()),
@@ -3824,31 +3816,35 @@ class _ShowGraphState extends State<ShowGraph> {
                                                       BorderRadius.circular(9),
                                                   onTap: () {
                                                     _animateGarphToIndex(index);
-                                                    _animateTemToIndex(index);
-                                                    if (Responsive.isDesktop(
-                                                        context)) {
-                                                      _animateListDataDesktop(
-                                                          index);
-                                                    }
-                                                    if (Responsive.isDesktop(
-                                                            context) &&
-                                                        provider.getResDataonlyone() ==
-                                                            false) {
-                                                      _animateListDataDesktopAlot(
-                                                          index);
-                                                    }
-                                                    if (Responsive.isTablet(
-                                                        context)) {
-                                                      _animateListDataTablet(
-                                                          index);
-                                                    }
-                                                    if (Responsive.isTablet(
-                                                            context) &&
-                                                        provider.getResDataonlyone() ==
-                                                            false) {
-                                                      _animateListDataTabletAlot(
-                                                          index);
-                                                    }
+                                                    _animateTemAndHumToIndexMobile(
+                                                        index);
+                                                    _animateListDataMobile(
+                                                        index);
+
+                                                    // if (Responsive.isDesktop(
+                                                    //     context)) {
+                                                    //   _animateListDataDesktop(
+                                                    //       index);
+                                                    // }
+                                                    // if (Responsive.isDesktop(
+                                                    //         context) &&
+                                                    //     provider.getResDataonlyone() ==
+                                                    //         false) {
+                                                    //   _animateListDataDesktopAlot(
+                                                    //       index);
+                                                    // }
+                                                    // if (Responsive.isTablet(
+                                                    //     context)) {
+                                                    //   _animateListDataTablet(
+                                                    //       index);
+                                                    // }
+                                                    // if (Responsive.isTablet(
+                                                    //         context) &&
+                                                    //     provider.getResDataonlyone() ==
+                                                    //         false) {
+                                                    //   _animateListDataTabletAlot(
+                                                    //       index);
+                                                    // }
                                                   },
                                                   child: Padding(
                                                     padding:
@@ -3888,7 +3884,233 @@ class _ShowGraphState extends State<ShowGraph> {
                     ),
                   ],
                 ),
-              ))
+              )),
+        // part 3 Responsive Mobile only
+
+        if (Responsive.isMobile(context))
+          SizedBox(
+            //sensor data list responsive desktop only ===============================================
+            height: 240,
+            width: sizePageWidth,
+            child: Card(
+                color: Colors.white,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                child: Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                          //data sensor to list ===================
+                          height: 215,
+                          width: sizePageWidth,
+                          child: ListView.builder(
+                              //cooooooo
+                              controller: _controllerListDataMobile,
+                              scrollDirection: Axis.horizontal,
+                              itemCount: provider.getSensorIdInCabinet().length,
+                              itemBuilder: (context, index) {
+                                double sizeMobilePading = sizePageWidth * 0.95;
+                                final Stream<
+                                        QuerySnapshot<Map<String, dynamic>>>
+                                    sensorData = FirebaseFirestore.instance
+                                        .collection('sensors')
+                                        .doc(provider
+                                            .getSensorIdInCabinet()[index])
+                                        .collection('list_data')
+                                        .orderBy("time", descending: true)
+                                        .snapshots();
+                                return Row(
+                                  children: [
+                                    StreamBuilder(
+                                        stream: sensorData,
+                                        builder: (context,
+                                            AsyncSnapshot<
+                                                    QuerySnapshot<
+                                                        Map<String, dynamic>>>
+                                                snapshot) {
+                                          if (snapshot.hasError) {
+                                            return const Text(
+                                                'Something went wrong',
+                                                style: TextStyle(
+                                                    color: Colors.red));
+                                          }
+                                          if (snapshot.connectionState ==
+                                              ConnectionState.waiting) {
+                                            return const Text(
+                                              "Loading",
+                                              style: TextStyle(
+                                                  color: Colors.white),
+                                            );
+                                          }
+                                          return SizedBox(
+                                            height: 215,
+                                            width: sizeMobilePading,
+                                            child: Column(
+                                              children: [
+                                                SizedBox(
+                                                  height: 30,
+                                                  width: sizePageWidth,
+                                                  child: Card(
+                                                    color: colorPriority4,
+                                                    child: Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        SizedBox(
+                                                          height: 30,
+                                                          width:
+                                                              sizeMobilePading *
+                                                                  0.25,
+                                                          child: const Icon(
+                                                            Icons
+                                                                .calendar_today,
+                                                            color: colorTextP2,
+                                                            size: 19,
+                                                          ),
+                                                        ),
+                                                        SizedBox(
+                                                          width:
+                                                              sizeMobilePading *
+                                                                  0.15,
+                                                          height: 30,
+                                                          child: const Icon(
+                                                            Icons.schedule,
+                                                            color: colorTextP2,
+                                                            size: 21,
+                                                          ),
+                                                        ),
+                                                        SizedBox(
+                                                          width:
+                                                              sizeMobilePading *
+                                                                  0.25,
+                                                          height: 30,
+                                                          child:
+                                                              SvgPicture.asset(
+                                                            "assets/icons/temperature.svg",
+                                                            color: colorTextP2,
+                                                          ),
+                                                        ),
+                                                        SizedBox(
+                                                          width:
+                                                              sizeMobilePading *
+                                                                  0.25,
+                                                          height: 30,
+                                                          child:
+                                                              SvgPicture.asset(
+                                                            "assets/icons/humidity.svg",
+                                                            color: colorTextP2,
+                                                          ),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  height: 165,
+                                                  width: sizeMobilePading,
+                                                  child: ListView(
+                                                    children: snapshot
+                                                        .data!.docs
+                                                        .map((DocumentSnapshot
+                                                            document) {
+                                                      Map<String, dynamic>
+                                                          data =
+                                                          document.data()!
+                                                              as Map<String,
+                                                                  dynamic>;
+                                                      return Container(
+                                                        color: data[
+                                                                        'temperature'] >
+                                                                    provider
+                                                                        .getTemperatureMax() ||
+                                                                data['temperature'] <
+                                                                    provider
+                                                                        .getTemperatureMin() ||
+                                                                data['humidity'] >
+                                                                    provider
+                                                                        .getHumidityMax()
+                                                            ? colorhighlightRed
+                                                            : Colors.white,
+                                                        child: Row(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .center,
+                                                          children: [
+                                                            SizedBox(
+                                                              width:
+                                                                  sizeMobilePading *
+                                                                      0.25,
+                                                              child: Center(
+                                                                child: Text(formatDate
+                                                                    .format(data[
+                                                                            'time']
+                                                                        .toDate())),
+                                                              ),
+                                                            ),
+                                                            SizedBox(
+                                                              width:
+                                                                  sizeMobilePading *
+                                                                      0.15,
+                                                              child: Center(
+                                                                child: Text(formatTime
+                                                                    .format(data[
+                                                                            'time']
+                                                                        .toDate())),
+                                                              ),
+                                                            ),
+                                                            SizedBox(
+                                                              width:
+                                                                  sizeMobilePading *
+                                                                      0.25,
+                                                              child: Center(
+                                                                child: Text(
+                                                                  "${data['temperature']}°C",
+                                                                  style: TextStyle(
+                                                                      color: data['temperature'] > provider.getTemperatureMax() || data['temperature'] < provider.getTemperatureMin()
+                                                                          ? Colors
+                                                                              .red
+                                                                          : Colors
+                                                                              .black),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            SizedBox(
+                                                              width:
+                                                                  sizeMobilePading *
+                                                                      0.25,
+                                                              child: Center(
+                                                                child: Text(
+                                                                  "${data['humidity']}%",
+                                                                  style: TextStyle(
+                                                                      color: data['humidity'] >
+                                                                              provider
+                                                                                  .getHumidityMax()
+                                                                          ? Colors
+                                                                              .red
+                                                                          : Colors
+                                                                              .black),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      );
+                                                    }).toList(),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          );
+                                        }),
+                                  ],
+                                );
+                              })),
+                    ],
+                  ),
+                )),
+          ),
       ],
     );
   }
