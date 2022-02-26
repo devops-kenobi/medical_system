@@ -372,7 +372,11 @@ class _CabinetState extends State<Cabinet> {
                                   )),
                               const Spacer(),
                               IconButton(
-                                onPressed: () => showDialogSetting(document.id),
+                                onPressed: () => {
+                                  showDialogSetting(document.id),
+                                  if (provider.getCabinetDetellsPage() == true)
+                                    provider.setCabinetDetellsPage(false)
+                                },
                                 icon: const Icon(Icons.tune_outlined,
                                     color: colorTextP2),
                               ),

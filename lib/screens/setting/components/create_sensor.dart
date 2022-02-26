@@ -55,7 +55,7 @@ class _CreateSensorState extends State<CreateSensor> {
   Future<void> addSensor(String name) {
     return sensors.add({
       'name': name,
-      'status': 'false',
+      'status': false,
     });
     // .then((value) => Navigator.of(context).pop())
     // // ignore: avoid_print

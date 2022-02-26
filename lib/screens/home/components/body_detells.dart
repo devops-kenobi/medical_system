@@ -151,9 +151,7 @@ class _ShowGraphState extends State<ShowGraph> {
     // print(TempAllInCabinet['B0bYihpaYBTf5vHTVY4e']);
     //--------------------------------------------------------------------------------------------------------------------------------------
 
-    //--------------------------------------------------------------------------------------------------------------------------------------
     //เนื่องด้วย dependencies "syncfusion_flutter_charts" ยังไม่รองรับ Data Structure ประเภท Map จึงต้องใช้โค้ดส่วนล่างไปก่อน
-
     List<Graph> dataTemp1 = [];
     List<Graph> dataHumi1 = [];
     if (provider.getSensorIdInCabinet().isNotEmpty) {
@@ -212,7 +210,6 @@ class _ShowGraphState extends State<ShowGraph> {
         }
       });
     }
-
     //--------------------------------------------------------------------------------------------------------------------------------------
     Future<void> showDialogConclusion() {
       bool resTempAndHumi = true;
@@ -3905,7 +3902,6 @@ class _ShowGraphState extends State<ShowGraph> {
                           height: 215,
                           width: sizePageWidth,
                           child: ListView.builder(
-                              //cooooooo
                               controller: _controllerListDataMobile,
                               scrollDirection: Axis.horizontal,
                               itemCount: provider.getSensorIdInCabinet().length,
